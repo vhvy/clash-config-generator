@@ -1,0 +1,22 @@
+{
+  "name": "cloudflare-pages-pure-template",
+  "version": "1.0.0",
+  "author": "vhvy",
+  "private": true,
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "wrangler pages dev public --ip 0.0.0.0",
+    "cf-typegen": "wrangler types --experimental-include-runtime",
+    "postinstall": "npm run cf-typegen"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241216.0",
+    "typescript": "latest",
+    "wrangler": "latest"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/js-yaml": "^4.0.9",
+    "js-yaml": "^4.1.0"
+  }
+}

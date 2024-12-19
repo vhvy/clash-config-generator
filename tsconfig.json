@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "lib": [
+      "ESNext"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "types": [
+        "./.wrangler/types/runtime",
+        "@cloudflare/workers-types/2023-07-01"
+    ],
+    "strict": true
+  },
+  "include": [
+    "functions/**/*.ts",
+    "types/**/*.ts",
+    "utils/**/*.ts"
+  ]
+}
