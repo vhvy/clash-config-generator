@@ -43,8 +43,9 @@ export const ruleProviders = {
   gameanddriver2: generateProvider("https://ruleset.skk.moe/Clash/non_ip/download.txt"),
   appleCN: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_cn.txt"),
 
-  appleOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/domainset/apple_other_domain.txt"),
-  microsoftOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/domainset/microsoft_other_domain.txt"),
+  appleOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_services.txt"),
+  appleOtherDomain2: generateProvider("https://ruleset.skk.moe/Clash/ip/apple_services.txt"),
+  microsoftOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/microsoft.txt"),
 
   ai: generateProvider("https://ruleset.skk.moe/Clash/non_ip/ai.txt"),
 
@@ -89,6 +90,7 @@ export const rules = [
   `${RuleTypeEnum.RULE_SET},streamIPGlobal,${ProxyTypeEnum.StreamGlobal}`,
 
   `${RuleTypeEnum.RULE_SET},appleOtherDomain,${ProxyTypeEnum.AppleOtherDomain}`,
+  `${RuleTypeEnum.RULE_SET},appleOtherDomain2,${ProxyTypeEnum.AppleOtherDomain}`,
   `${RuleTypeEnum.RULE_SET},microsoftOtherDomain,${ProxyTypeEnum.MicrosoftOtherDomain}`,
   `${RuleTypeEnum.RULE_SET},ai,${ProxyTypeEnum.AI}`,
 
