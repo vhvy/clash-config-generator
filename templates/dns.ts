@@ -25,7 +25,7 @@ const foreignDNS = [
 const dnsConfig = {
   "enable": true,
   "prefer-h3": true,
-  "listen": "127.0.0.1:8853",
+  "listen": "0.0.0.0:8853",
   "ipv6": false,
   "enhanced-mode": "redir-host",
   "fake-ip-range": "198.10.0.1/16",
