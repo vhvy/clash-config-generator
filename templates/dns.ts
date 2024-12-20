@@ -27,10 +27,11 @@ const dnsConfig = {
   "prefer-h3": true,
   "listen": "0.0.0.0:8853",
   "ipv6": false,
-  "enhanced-mode": "redir-host",
+  "enhanced-mode": "redir-host", // clash verge rev 2.0 以上版本在开启 tun 模式之后，强制设置 enhanced-mode 为 fake-ip 模式，所以下面的 fake ip 配置不可省略
   "fake-ip-range": "198.10.0.1/16",
   "fake-ip-filter": [
-    "*.lan"
+    "*.lan",
+    "*.danswer.me"
   ],
   "default-nameserver": defaultDNS,
   "nameserver": foreignDNS,

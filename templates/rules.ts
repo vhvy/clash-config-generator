@@ -1,7 +1,7 @@
 import { ProxyTypeEnum } from "../types/proxy";
 import { RuleTypeEnum, RuleActionEnum } from "../types/rules";
 
-type ProviderBehavior = "classical" | "domain";
+type ProviderBehavior = "classical" | "domain" | "ipcidr";
 
 const generateProvider = (url: string, behavior: ProviderBehavior = "classical") => {
   return {
@@ -28,13 +28,13 @@ export const ruleProviders = {
   streamEU: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream_eu.txt"),
   streamGlobal: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream.txt"),
 
-  streamIPHK: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_hk.txt"),
-  streamIPJP: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_jp.txt"),
-  streamIPUS: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_us.txt"),
-  streamIPTW: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_tw.txt"),
-  streamIPKR: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_kr.txt"),
-  streamIPEU: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_eu.txt"),
-  streamIPGlobal: generateProvider("https://ruleset.skk.moe/Clash/ip/stream.txt"),
+  streamIPHK: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_hk.txt", "ipcidr"),
+  streamIPJP: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_jp.txt", "ipcidr"),
+  streamIPUS: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_us.txt", "ipcidr"),
+  streamIPTW: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_tw.txt", "ipcidr"),
+  streamIPKR: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_kr.txt", "ipcidr"),
+  streamIPEU: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_eu.txt", "ipcidr"),
+  streamIPGlobal: generateProvider("https://ruleset.skk.moe/Clash/ip/stream.txt", "ipcidr"),
 
 
   applecdn: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_cdn.txt"),
@@ -44,7 +44,7 @@ export const ruleProviders = {
   appleCN: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_cn.txt"),
 
   appleOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_services.txt"),
-  appleOtherDomain2: generateProvider("https://ruleset.skk.moe/Clash/ip/apple_services.txt"),
+  appleOtherIP: generateProvider("https://ruleset.skk.moe/Clash/ip/apple_services.txt", "ipcidr"),
   microsoftOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/microsoft.txt"),
 
   ai: generateProvider("https://ruleset.skk.moe/Clash/non_ip/ai.txt"),
@@ -53,10 +53,10 @@ export const ruleProviders = {
   chinaOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/domestic.txt"),
 
   local: generateProvider("https://ruleset.skk.moe/Clash/non_ip/lan.txt"),
-  localIP: generateProvider("https://ruleset.skk.moe/Clash/ip/lan.txt"),
+  localIP: generateProvider("https://ruleset.skk.moe/Clash/ip/lan.txt", "ipcidr"),
 
-  chinaAnycastIP: generateProvider("https://ruleset.skk.moe/Clash/ip/domestic.txt"),
-  chinaIP: generateProvider("https://ruleset.skk.moe/Clash/ip/china_ip.txt"),
+  chinaAnycastIP: generateProvider("https://ruleset.skk.moe/Clash/ip/domestic.txt", "ipcidr"),
+  chinaIP: generateProvider("https://ruleset.skk.moe/Clash/ip/china_ip.txt", "ipcidr"),
 };
 
 export const rules = [
@@ -89,9 +89,9 @@ export const rules = [
   `${RuleTypeEnum.RULE_SET},streamIPEU,${ProxyTypeEnum.StreamEU}`,
   `${RuleTypeEnum.RULE_SET},streamIPGlobal,${ProxyTypeEnum.StreamGlobal}`,
 
-  `${RuleTypeEnum.RULE_SET},appleOtherDomain,${ProxyTypeEnum.AppleOtherDomain}`,
-  `${RuleTypeEnum.RULE_SET},appleOtherDomain2,${ProxyTypeEnum.AppleOtherDomain}`,
-  `${RuleTypeEnum.RULE_SET},microsoftOtherDomain,${ProxyTypeEnum.MicrosoftOtherDomain}`,
+  `${RuleTypeEnum.RULE_SET},appleOtherDomain,${ProxyTypeEnum.AppleOtherService}`,
+  `${RuleTypeEnum.RULE_SET},appleOtherIP,${ProxyTypeEnum.AppleOtherService}`,
+  `${RuleTypeEnum.RULE_SET},microsoftOtherDomain,${ProxyTypeEnum.MicrosoftOtherService}`,
   `${RuleTypeEnum.RULE_SET},ai,${ProxyTypeEnum.AI}`,
 
   `${RuleTypeEnum.RULE_SET},overseasOtherDomain,${ProxyTypeEnum.Overseas}`,

@@ -17,8 +17,8 @@ export enum ProxyTypeEnum {
   StreamEU = "🎬StreamEU",
   StreamGlobal = "🎬StreamGlobal",
 
-  AppleOtherDomain = "🍎AppleOtherDomain",
-  MicrosoftOtherDomain = "🍎MicrosoftOtherDomain",
+  AppleOtherService = "🍎AppleOtherService",
+  MicrosoftOtherService = "🍎MicrosoftOtherService",
   AI = "🤖AI",
 
   Other = "🌐Other",

@@ -80,7 +80,7 @@ export const proxyGroups = [
     ]
   },
   {
-    name: ProxyTypeEnum.AppleOtherDomain,
+    name: ProxyTypeEnum.AppleOtherService,
     type: "select",
     "include-all-proxies": true,
     proxies: [
@@ -89,7 +89,7 @@ export const proxyGroups = [
     ]
   },
   {
-    name: ProxyTypeEnum.MicrosoftOtherDomain,
+    name: ProxyTypeEnum.MicrosoftOtherService,
     type: "select",
     "include-all-proxies": true,
     proxies: [
