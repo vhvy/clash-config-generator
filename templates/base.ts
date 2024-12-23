@@ -5,7 +5,7 @@ const baseConfig = {
   "ipv6": false,
   "external-controller": "0.0.0.0:9090",
   "secret": "114514",
-  "external-ui": "/etc/mihomo/ui",
+  "external-ui": "ui",
   "port": 7890,
   "socks-port": 7891,
   "redir-port": 7892,
