@@ -60,6 +60,10 @@ export const ruleProviders = {
 };
 
 export const rules = [
+  `${RuleTypeEnum.DOMAIN_KEYWORD},cyc-anime,${RuleActionEnum.DIRECT}`,
+  `${RuleTypeEnum.DOMAIN_KEYWORD},cycanime,${RuleActionEnum.DIRECT}`,
+  `${RuleTypeEnum.DOMAIN_SUFFIX},senhewenhua.com,${RuleActionEnum.DIRECT}`,
+
   `${RuleTypeEnum.RULE_SET},pcdn,${RuleActionEnum.REJECT}`,
   `${RuleTypeEnum.RULE_SET},track,${RuleActionEnum.REJECT_DROP}`,
   `${RuleTypeEnum.RULE_SET},speedtest,${RuleActionEnum.DIRECT}`,
