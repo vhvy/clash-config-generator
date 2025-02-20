@@ -14,49 +14,49 @@ const generateProvider = (url: string, behavior: ProviderBehavior = "classical")
 };
 
 export const ruleProviders = {
-  pcdn: generateProvider("https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt"),
-  track: generateProvider("https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt"),
-  speedtest: generateProvider("https://ruleset.skk.moe/Clash/domainset/speedtest.txt"),
-  staticcdn: generateProvider("https://ruleset.skk.moe/Clash/domainset/cdn.txt", "domain"),
-  staticcdn2: generateProvider("https://ruleset.skk.moe/Clash/non_ip/cdn.txt"),
+  pcdn: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt"),
+  track: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/reject-drop.txt"),
+  speedtest: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/domainset/speedtest.txt", "domain"),
+  staticcdn: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/domainset/cdn.txt", "domain"),
+  staticcdn2: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/cdn.txt"),
 
-  streamHK: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream_hk.txt"),
-  streamJP: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream_jp.txt"),
-  streamUS: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream_us.txt"),
-  streamTW: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream_tw.txt"),
-  streamKR: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream_kr.txt"),
-  streamEU: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream_eu.txt"),
-  streamGlobal: generateProvider("https://ruleset.skk.moe/Clash/non_ip/stream.txt"),
+  streamHK: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/stream_hk.txt"),
+  streamJP: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/stream_jp.txt"),
+  streamUS: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/stream_us.txt"),
+  streamTW: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/stream_tw.txt"),
+  streamKR: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/stream_kr.txt"),
+  streamEU: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/stream_eu.txt"),
+  streamGlobal: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/stream.txt"),
 
-  streamIPHK: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_hk.txt", "ipcidr"),
-  streamIPJP: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_jp.txt", "ipcidr"),
-  streamIPUS: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_us.txt", "ipcidr"),
-  streamIPTW: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_tw.txt", "ipcidr"),
-  streamIPKR: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_kr.txt", "ipcidr"),
-  streamIPEU: generateProvider("https://ruleset.skk.moe/Clash/ip/stream_eu.txt", "ipcidr"),
-  streamIPGlobal: generateProvider("https://ruleset.skk.moe/Clash/ip/stream.txt", "ipcidr"),
+  streamIPHK: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/stream_hk.txt", "classical"),
+  streamIPJP: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/stream_jp.txt", "classical"),
+  streamIPUS: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/stream_us.txt", "classical"),
+  streamIPTW: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/stream_tw.txt", "classical"),
+  streamIPKR: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/stream_kr.txt", "classical"),
+  streamIPEU: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/stream_eu.txt", "classical"),
+  streamIPGlobal: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/stream.txt", "classical"),
 
 
-  applecdn: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_cdn.txt"),
-  microsoftcdn: generateProvider("https://ruleset.skk.moe/Clash/non_ip/microsoft_cdn.txt"),
-  gameanddriver1: generateProvider("https://ruleset.skk.moe/Clash/domainset/download.txt", "domain"),
-  gameanddriver2: generateProvider("https://ruleset.skk.moe/Clash/non_ip/download.txt"),
-  appleCN: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_cn.txt"),
+  applecdn: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/apple_cdn.txt"),
+  microsoftcdn: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/microsoft_cdn.txt"),
+  gameanddriver1: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/domainset/download.txt", "domain"),
+  gameanddriver2: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/download.txt"),
+  appleCN: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/apple_cn.txt"),
 
-  appleOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/apple_services.txt"),
-  appleOtherIP: generateProvider("https://ruleset.skk.moe/Clash/ip/apple_services.txt", "ipcidr"),
-  microsoftOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/microsoft.txt"),
+  appleOtherDomain: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/apple_services.txt"),
+  appleOtherIP: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/apple_services.txt", "classical"),
+  microsoftOtherDomain: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/microsoft.txt"),
 
-  ai: generateProvider("https://ruleset.skk.moe/Clash/non_ip/ai.txt"),
+  ai: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/ai.txt"),
 
-  overseasOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/global.txt"),
-  chinaOtherDomain: generateProvider("https://ruleset.skk.moe/Clash/non_ip/domestic.txt"),
+  overseasOtherDomain: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/global.txt"),
+  chinaOtherDomain: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/domestic.txt"),
 
-  local: generateProvider("https://ruleset.skk.moe/Clash/non_ip/lan.txt"),
-  localIP: generateProvider("https://ruleset.skk.moe/Clash/ip/lan.txt", "ipcidr"),
+  local: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/non_ip/lan.txt"),
+  localIP: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/lan.txt", "classical"),
 
-  chinaAnycastIP: generateProvider("https://ruleset.skk.moe/Clash/ip/domestic.txt", "ipcidr"),
-  chinaIP: generateProvider("https://ruleset.skk.moe/Clash/ip/china_ip.txt", "ipcidr"),
+  chinaAnycastIP: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/domestic.txt", "classical"),
+  chinaIP: generateProvider("https://cdn.jsdelivr.net/gh/SukkaLab/ruleset.skk.moe/Clash/ip/china_ip.txt", "ipcidr"),
 };
 
 export const rules = [
