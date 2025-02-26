@@ -13,6 +13,7 @@ export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
   const urlParams = new URL(request.url).searchParams;
   const secret = urlParams.get("secret");
   const autoRoute = urlParams.get("auto-route") === "1";
+  const ipv6Dns = urlParams.get("ipv6-dns") === "1";
 
   if (!env.CLASH_GW_SECRET || env.CLASH_GW_SECRET !== secret) {
     return new Response(null, {
@@ -37,7 +38,10 @@ export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
 
   const fullClashConfig = {
     ...base,
-    dns,
+    dns: {
+      ...dns,
+      "ipv6": ipv6Dns
+    },
     tun: {
       ...tun,
       "auto-route": autoRoute
