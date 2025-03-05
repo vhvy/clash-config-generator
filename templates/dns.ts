@@ -17,7 +17,10 @@ const domesticDNS = [
 const foreignDNS = [
   "https://dns.quad9.net/dns-query",
   "tcp://8.8.8.8:53",
+  "https://101.101.101.101/dns-query",
+  "https://101.102.103.104/dns-query",
   "https://doh.opendns.com/dns-query",
+  "https://208.67.222.222/dns-query",
   "https://dns.google/dns-query",
   "https://1.0.0.1/dns-query",
   "https://1.1.1.1/dns-query",
