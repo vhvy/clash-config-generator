@@ -30,6 +30,7 @@ const foreignDNS = [
 
 const dnsConfig = {
   "enable": true,
+  "respect-rules": true,
   "prefer-h3": true,
   "listen": "0.0.0.0:8853",
   "ipv6": false,
