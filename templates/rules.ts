@@ -60,6 +60,7 @@ export const ruleProviders = {
 };
 
 export const rules = [
+  `${RuleTypeEnum.DOMAIN_SUFFIX},archive.org,${ProxyTypeEnum.Overseas}`,
   `${RuleTypeEnum.DOMAIN_KEYWORD},cyc-anime,${RuleActionEnum.DIRECT}`,
   `${RuleTypeEnum.DOMAIN_KEYWORD},cycanime,${RuleActionEnum.DIRECT}`,
   `${RuleTypeEnum.DOMAIN_SUFFIX},senhewenhua.com,${RuleActionEnum.DIRECT}`,
