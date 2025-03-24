@@ -3,12 +3,14 @@ import dns from "../../templates/dns";
 import tun from "../../templates/tun";
 import { ruleProviders, rules } from "../../templates/rules";
 import { proxyGroups } from "../../templates/proxy-groups";
+import { reportSubScriptionClient } from "../../services/report";
 
 import yaml from "js-yaml";
 import { addPropertyToProxies } from "../../utils/proxies";
 
 
-export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
+export const onRequest: PagesFunction<Env> = async (ctx) => {
+  const { env, request } = ctx;
 
   const urlParams = new URL(request.url).searchParams;
   const secret = urlParams.get("secret");
@@ -22,6 +24,17 @@ export const onRequest: PagesFunction<Env> = async ({ request, env }) => {
   }
 
   base.secret = env.CLASH_API_SECRET;
+
+  if (env.REPORT_URL && env.REPORT_AUTH_KEY) {
+    const detail = {
+      userAgent: request.headers.get("User-Agent"),
+      ip: request.headers.get("CF-Connecting-IP"),
+      country: request.headers.get("CF-IPCountry"),
+      referer: request.headers.get("Referer"),
+      url: request.url
+    };
+    reportSubScriptionClient(env.REPORT_URL, env.REPORT_AUTH_KEY, detail);
+  }
 
   const response = await fetch(env.CLASH_PROVIDER);
   const subscriptionUserInfo = response.headers.get("subscription-userinfo");
