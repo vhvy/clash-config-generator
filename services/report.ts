@@ -3,7 +3,7 @@
 export const reportSubScriptionClient = async (_url: string, reportAuthKey: string, detail: Record<any, any>) => {
   try {
     const url = new URL(_url);
-    fetch(url.href, {
+    await fetch(url.href, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

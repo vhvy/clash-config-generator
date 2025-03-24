@@ -25,6 +25,8 @@ export const onRequest: PagesFunction<Env> = async (ctx) => {
 
   base.secret = env.CLASH_API_SECRET;
 
+  const tasks = [];
+
   if (env.REPORT_URL && env.REPORT_AUTH_KEY) {
     const detail = {
       userAgent: request.headers.get("User-Agent"),
@@ -33,10 +35,12 @@ export const onRequest: PagesFunction<Env> = async (ctx) => {
       referer: request.headers.get("Referer"),
       url: request.url
     };
-    reportSubScriptionClient(env.REPORT_URL, env.REPORT_AUTH_KEY, detail);
+    tasks.push(reportSubScriptionClient(env.REPORT_URL, env.REPORT_AUTH_KEY, detail));
   }
 
-  const response = await fetch(env.CLASH_PROVIDER);
+  tasks.unshift(fetch(env.CLASH_PROVIDER));
+
+  const response = (await Promise.all(tasks))[0] as Response;
   const subscriptionUserInfo = response.headers.get("subscription-userinfo");
 
   const clashRemoteConfig = await response.text();
