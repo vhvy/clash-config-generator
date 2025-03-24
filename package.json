@@ -6,13 +6,13 @@
   "main": "src/index.ts",
   "scripts": {
     "dev": "wrangler pages dev public --ip 0.0.0.0",
-    "cf-typegen": "wrangler types --experimental-include-runtime",
+    "cf-typegen": "wrangler types",
     "postinstall": "npm run cf-typegen"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241216.0",
-    "typescript": "latest",
-    "wrangler": "latest"
+    "@cloudflare/workers-types": "^4.20250321.0",
+    "typescript": "^5.8.2",
+    "wrangler": "^4.4.0"
   },
   "license": "MIT",
   "dependencies": {
