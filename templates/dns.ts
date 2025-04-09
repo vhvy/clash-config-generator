@@ -15,25 +15,15 @@ const domesticDNS = [
 ];
 
 const foreignDNS = [
-  "https://dns.quad9.net/dns-query",
   "tcp://8.8.8.8:53",
   "https://101.101.101.101/dns-query",
-  "https://101.102.103.104/dns-query",
-  "https://doh.opendns.com/dns-query",
   "https://208.67.222.222/dns-query",
-  "https://208.67.220.220/dns-query",
-  "https://208.67.222.123/dns-query",
   "https://dns.google/dns-query",
-  "https://1.0.0.1/dns-query",
   "https://1.1.1.1/dns-query",
   "https://public.dns.iij.jp/dns-query",
-  "tls://dns.google:853",
   "https://9.9.9.9/dns-query",
-  "https://doh.apad.pro/dns-query",
-  "https://149.112.112.112/dns-query",
-  "https://max.rethinkdns.com/dns-query",
-  "https://sky.rethinkdns.com/dns-query",
   "https://dns.nextdns.io/dns-query",
+  "https://hod.danswer.me/dns-query"
 ];
 
 const dnsConfig = {
