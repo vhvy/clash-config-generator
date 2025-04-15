@@ -15,15 +15,13 @@ export const onRequest: PagesFunction<Env> = async (ctx) => {
   const urlParams = new URL(request.url).searchParams;
   const secret = urlParams.get("secret");
   const autoRoute = urlParams.get("auto-route") === "1";
-  const ipv6Dns = urlParams.get("ipv6-dns") === "1";
+  const enableIpv6 = urlParams.get("ipv6") === "1";
 
   if (!env.CLASH_GW_SECRET || env.CLASH_GW_SECRET !== secret) {
     return new Response(null, {
       status: 204
     });
   }
-
-  base.secret = env.CLASH_API_SECRET;
 
   const tasks = [];
 
@@ -55,9 +53,11 @@ export const onRequest: PagesFunction<Env> = async (ctx) => {
 
   const fullClashConfig = {
     ...base,
+    secret: env.CLASH_API_SECRET,
+    ipv6: enableIpv6,
     dns: {
       ...dns,
-      "ipv6": ipv6Dns
+      "ipv6": enableIpv6
     },
     tun: {
       ...tun,

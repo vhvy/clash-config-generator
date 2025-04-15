@@ -22,8 +22,7 @@ const foreignDNS = [
   "https://1.1.1.1/dns-query",
   "https://public.dns.iij.jp/dns-query",
   "https://9.9.9.9/dns-query",
-  "https://dns.nextdns.io/dns-query",
-  "https://hod.danswer.me/dns-query"
+  "https://dns.nextdns.io/dns-query"
 ];
 
 const dnsConfig = {
