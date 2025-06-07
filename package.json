@@ -10,9 +10,9 @@
     "postinstall": "npm run cf-typegen"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20250321.0",
-    "typescript": "^5.8.2",
-    "wrangler": "^4.4.0"
+    "@cloudflare/workers-types": "^4.20250607.0",
+    "typescript": "^5.8.3",
+    "wrangler": "^4.19.1"
   },
   "license": "MIT",
   "dependencies": {

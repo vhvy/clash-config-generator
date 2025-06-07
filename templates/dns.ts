@@ -8,7 +8,6 @@ const defaultDNS = [
 
 const domesticDNS = [
   "https://223.6.6.6/dns-query",
-  "https://rubyfish.cn/dns-query",
   "https://dns.pub/dns-query",
   "https://dns.alidns.com/dns-query",
   "1.2.4.8"
@@ -35,7 +34,6 @@ const dnsConfig = {
   "fake-ip-range": "198.10.0.1/16",
   "fake-ip-filter": [
     "*.lan",
-    "*.danswer.me"
   ],
   "default-nameserver": defaultDNS,
   "nameserver": foreignDNS,
