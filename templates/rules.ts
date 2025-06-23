@@ -60,7 +60,6 @@ export const ruleProviders = {
 };
 
 export const rules = [
-  `${RuleTypeEnum.DOMAIN},hod.danswer.me,${ProxyTypeEnum.Direct}`,
   `${RuleTypeEnum.DOMAIN_SUFFIX},docker.com,${ProxyTypeEnum.Overseas}`,
   `${RuleTypeEnum.DOMAIN_SUFFIX},archive.org,${ProxyTypeEnum.Overseas}`,
   `${RuleTypeEnum.DOMAIN_KEYWORD},cyc-anime,${RuleActionEnum.DIRECT}`,
